@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Book Now | The Blue Ridge Chapel</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+	crossorigin="anonymous">
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,900;1,700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="/css/navigation.css">
+<link rel="stylesheet" href="/css/main.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  
+</head>
+<body>
+
+<div th:replace="navigation::header"></div>
+
+<div id="booknow-header" class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+<div class="mt-auto mb-auto px-3 text-center text-white">
+   <h2 class="text-white">Book Now!</h2>
+   <p class="lead">Fill out the form below to book your reservation. We can't wait to see you!</p>
+</div>
+</div>
+
+<div id="new_reservation" class="container mx-auto">
+<div class="row">
+<div class="col-md-3 offset-1 p-3">
+	<h2 class="mb-2">$160<small class="text-muted fw-light">/day</small></h2>
+	<h5 class="mb-2">BOOKING INFORMATION:</h5>
+	<ul>
+		<li>6 Guests Maximun</li>
+		<li>2 Bedrooms | 4 Beds | 2.5 Baths</li>
+		<li>Check-in after 3:00pm</li>
+		<li>Check-out before 10:00am</li>
+		<li>Dog Friendly ($50 pet fee)</li>
+		<li>No Cats</li>
+		<li>No parties or events</li>
+		<li>No smoking</li>
+		
+	</ul>
+	
+</div>
+	<div class="col-md-7">
+	<div th:if="${param.success}">
+			<div class="alert alert-success">
+			Thanks for making a reservation! Check your email for your confirmation number.
+			</div>
+		</div>
+		<form th:action="@{/reservation/save}" th:object="${reservation}" method="post" id="reservation_form" name="reservation_form">
+			<div class="row">
+			<div class="col-md-6">
+			<label>First Name</label>
+			<input type="text" class="form-control" th:field="*{name}" id="name" name="name" placeholder="Full Name" required> 
+			</div>
+			<div class="col-md-6">
+			<label>Email</label>
+			<input type="email" class="form-control" th:field="*{email}" id="email" name="email" placeholder="Email Address" required> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<label>Number of Guests</label>
+			<input type="number" class="form-control" th:field="*{numberOfGuests}" name="number_of_guests" min="2" max="6" placeholder="Number of Guests" required>
+			</div>
+			<div class="col-md-6">
+			<label>Are you bringing a pet</label>
+			<select class="form-select" th:field="*{petStatus}" name="pet_status" required>
+			  <option value="">Select pet status</option>
+			  <option value="no" selected>No</option>
+			  <option value="yes" selected>Yes</option>
+			</select>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<label>Check In Date</label>
+			<input type="date" class="form-control" th:field="*{checkInDate}" name="check_in_date" required>
+			</div>
+			<div class="col-md-6">
+			<label>Check Out Date</label>
+			<input type="date" class="form-control" th:field="*{checkOutDate}" name="check_out_date" required>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-12">
+			<select class="form-select" th:field="*{propertyLocation}" name="property_location" required>
+			  <option value="">Select a property location</option>
+			  <option value="1" selected>The Blue Ridge Chapel</option>
+			</select>
+			</div>
+			</div>
+					
+			<input id="reservation_submit" class="btn" type="submit" name="submit" value="Book your Reservation" >
+				
+		</form>
+	</div>	
+	
+	</div>
+</div>
+
+
+</body>
+</html>

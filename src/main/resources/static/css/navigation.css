@@ -1,0 +1,236 @@
+@charset "ISO-8859-1";
+
+#home-page{
+	background-image: url("../img/BRC-front.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family:'Poppins 400', sans-serif;
+}
+
+#login-page, #register-page{
+	background-image: url("../img/backporch.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family:'Poppins 400', sans-serif;
+	color:black;
+	
+}
+
+.blue-link, .blue-link:hover{
+	color:#3D876A;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+
+
+h2, h3{
+	color:#3D876A;
+}
+
+
+h1{
+	font-family: 'Vollkorn', serif;
+	font-weight:900;
+}
+
+.h1, h1{
+	font-size:calc(2rem + 1.5vw);
+}
+
+.h2, h2{
+	font-size:calc(1.75rem + 1.5vw);
+}
+
+@media (min-width: 1200px){
+	
+	.h1, h1{
+		font-size:3rem;
+	}
+	.h2, h2{
+		font-size:2.7rem;
+	}
+	
+}
+
+nav{
+	opacity:85%;
+}
+
+a.nav-link, a.nav-link:link {
+	color: white;
+}
+
+a.nav-link:active {
+	color: gray;
+}
+
+a.nav-link:hover{
+	color:#5FD4A5;
+}
+
+.navbar-nav .nav-link.active {
+	color: gray;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding: 15px;
+}
+
+.navbar-toggler, span.navbar-toggler-icon {
+	color: white;
+}
+
+svg.navbar-toggler-icon {
+	fill: white;
+}
+
+.carousel-item img {
+	width: 100%;
+	height: 550px;
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+#about h5, #contact-us h5, #new_reservation h5, #contact-us svg, #about h4, #testimonials h4, #about svg{
+	color:#265442;
+}
+
+#testimonials .card{
+	box-shadow: 3px 3px 6px grey;
+}
+
+#new_reservation label{
+	font-family: 'Vollkorn', serif;
+	font-weight:400;
+	color:#265442;
+	margin-bottom:0px;
+	text-transform:uppercase;
+}
+
+.b-example-divider {
+	height: 3rem;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em
+		rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 100vh;
+}
+
+.bi {
+	vertical-align: -.125em;
+	fill: currentColor;
+}
+
+.nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Globals
+ */
+
+/* Custom default button */
+.btn-blue, .btn-blue:hover, .btn-blue:focus{
+	color: white;
+	background-color:#5FD4A5;
+	text-shadow: none; /* Prevent inheritance from `body` */
+	box-shadow: 3px 3px 6px black;
+	
+}
+
+.btn-blue2, .btn-blue2:hover, .btn-blue2:focus{
+	color: white;
+	background-color:#30D1C6;
+	text-shadow: none; /* Prevent inheritance from `body` */
+	
+}
+
+
+.login-btn:hover, .login-btn:focus{
+	color: white;
+	background-color:#3D876A;
+	text-shadow: none; /* Prevent inheritance from `body` */
+	box-shadow: 3px 3px 6px black;
+}
+
+/*
+ * Base structure
+ */
+
+#home-page{
+	text-shadow: 3px 3px 6px black;
+	
+}
+
+#user-management li{
+	width:50%;
+}
+
+#user-management button{
+	width:100%;
+	border-radius:0;
+	color:#04857C;
+	border: 1px solid #dee2e6;
+}
+
+#user-management button.active{
+	width:100%;
+	border-radius:0;
+	background-color:#D9D9D9;
+	color:#04857C;
+}
+
+#login-page .cover-container {
+	max-width: 40em;
+	height:90%;
+}
+
+#register-page .cover-container {
+	max-width: 40em;
+	height:90%;
+}
+
+#home-page .cover-container{
+	max-width: 56em;
+	height:90%;
+}
+
+
+div #main-container{
+	height:90%;
+}

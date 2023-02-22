@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>About | The Blue Ridge Chapel</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+	crossorigin="anonymous">
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,900;1,700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="/css/navigation.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" fill="currentColor" class="bi bi-door-open">
+<symbol id="door" viewBox="0 0 16 16">
+  <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+  <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
+</symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" fill="currentColor" class="bi bi-router">
+<symbol id="internet" viewBox="0 0 16 16">
+  <path d="M5.525 3.025a3.5 3.5 0 0 1 4.95 0 .5.5 0 1 0 .707-.707 4.5 4.5 0 0 0-6.364 0 .5.5 0 0 0 .707.707Z"/>
+  <path d="M6.94 4.44a1.5 1.5 0 0 1 2.12 0 .5.5 0 0 0 .708-.708 2.5 2.5 0 0 0-3.536 0 .5.5 0 0 0 .707.707ZM2.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm4.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Zm1.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Z"/>
+  <path d="M2.974 2.342a.5.5 0 1 0-.948.316L3.806 8H1.5A1.5 1.5 0 0 0 0 9.5v2A1.5 1.5 0 0 0 1.5 13H2a.5.5 0 0 0 .5.5h2A.5.5 0 0 0 5 13h6a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5h.5a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 14.5 8h-2.306l1.78-5.342a.5.5 0 1 0-.948-.316L11.14 8H4.86L2.974 2.342ZM14.5 9a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h13Z"/>
+  <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
+ </symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" fill="currentColor" class="bi bi-person-check">
+<symbol id="person" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+  <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+</symbol>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" fill="currentColor" class="bi bi-house">
+<symbol id="house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+</symbol>
+</svg>
+
+<div th:replace="navigation::header"></div>
+
+<div id="about-header" class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+<div class="mt-auto mb-auto px-3 text-center text-white">
+   <h2 class="text-white">About The Blue Ridge Chapel</h2>
+   <p class="lead">Come away to the peace, privacy, and natural beauty of Waynesville and Maggie Valley!
+</p>
+</div>
+</div>
+
+<div id="about" class="container">
+
+<div class="row">
+
+<div class="col-md-8" style="padding-right:40px;">
+
+	<h3>Experience Waynesville With Us</h3>
+	<p>This peaceful mountain-top cabin is the kind of private getaway a country music star would stay 
+	in for a while (the owner is connected to the industry). Also perfect for the whole family, the 3-story
+	 home has 2 bedrooms, a full kitchen, open concept living areas with soaring ceilings and seamless windows,
+	  and 2 large balconies to enjoy the views.
+	</p>
+	<p>Utah Mountain Estates is a private mountain community. The community is very friendly with many places to walk 
+	and soak in the Appalachian views. Nestled in the mountains between Waynesville, NC, and Maggie Valley, NC.Historic Downtown
+	 Waynesville is an artsy mountain town with plenty of shops and great food all within a short walk of each other. Maggie 
+	 Valley is a ski town/tourist destination with skiing, great restaurants, horseback riding, hiking, live music, one of the 
+	 biggest historical motorcycle museums in the country, and so much more!</p>
+
+	<ul>
+	<li>17 min drive to Maggie Valley</li>
+	<li>25 min drive to Cataloochee Ski Area</li>
+	<li>28 min drive to the GSMNP</li>
+	</ul>
+	
+	<h5 class="mb-2">THE SPACE</h5>
+	<ul>
+		<li>2 large bedrooms; 1 King, 1 Queen, 1 Queen Sleeper Sofa, and 1 Futon in the basement</li>
+		<li>2.5 bathrooms; 1 walk-in shower and 1 tub/shower combo</li>
+		<li>Large kitchen area with breakfast bar</li>
+		<li>Sunny lounge with recliners, large screen HD Smart TV, and fireplace</li>
+		<li>Dedicated workspace in the basement</li>
+		<li>2 Sweeping balconies</li>
+		<li>Bathroom Essentials</li>
+		<li>Washer and Dryer</li>
+		<li>Big backyard with orchard and fire pit</li>
+		<li>First Aid Kit, Hair Dryer, Fire Extinguisher, Dog Kennel/Crate</li>
+		<li>Dog Friendly ($50 pet fee)</li>
+	</ul>
+	
+	<h5 class="mb-2">BEDROOMS</h5>
+	<p>This cabin is perfect for a romantic retreat, small family vacation, golf getaway, or friend's trip. Its two private bedrooms 
+	are designed for rest and relaxation with comfortable mattresses and high-end linens. The master bedroom boasts a king bed while
+	 the other room features a Queen. Soft carpeting, handcrafted furniture, and windows that allow for plenty of natural light should 
+	 help you settle in and feel at home in both rooms. The Futon in the basement and the Sleeper Sofa in the lounge offer additional 
+	 sleeping options should you need them.</p>
+	 
+	 <h5 class="mb-2">BATHROOMS</h5>
+	<p>The master bedroom offers a private full bathroom, complete with a walk-in shower plus a built-in shower bench behind frosted glass
+	 doors. The bathroom also has a mirrored vanity, ample storage, and hotel-quality towels. The second bathroom provides a tub/shower combo
+	  that's perfect for a soak after a day out skiing in Maggie Valley.</p>
+	
+		<h5 class="mb-2">KITCHEN</h5>
+		<p>The open-concept kitchen combines the original character and charm of a classic cabin with the amenities of a luxury home. It features
+		 exposed wood beams, custom cabinets, and granite countertops. The drawers and cabinets are stocked with utensils, wine glasses, coffee mugs,
+		  and kitchen gadgets to help prepare and serve meals for a family. You can store any leftovers in the full-size refrigerator. Early risers can 
+		  brew coffee in the coffee maker and enjoy it out on the balcony, and night owls can heat up leftovers or pop some corn in the microwave and enjoy
+		   it while watching a movie in the living room. A breakfast bar with high-top seating provides a convenient place to eat breakfast before heading 
+		   out to explore the mountains.The formal dining area sits in an alcove of windows overlooking the balcony. This space is perfect for enjoying a 
+		   family-style meal together or opening up your laptops to get some work done before heading out on a family hike. The dining table has seating for
+		    six and offers great views of the natural beauty right outside.</p>
+		    
+	 <h5 class="mb-2">LOUNGE</h5>
+	<p>The living room is surrounded by windows and fills with sunshine in the afternoons. The soaring ceilings, hardwood floors, antique furniture, and
+	 modern finishes create a space the whole family will love. It features a gorgeous stone fireplace, a flat-screen TV, and comfortable recliners. A 
+	 secondary hangout space in the basement features a pool table, futon, and dedicated workspace. This area is surrounded by windows overlooking the 
+	 mountainside and can be used as a private office or an additional bedroom. Glass doors lead from this room out to the balcony, where you can sit in 
+	 rocking chairs and enjoy the view.</p>
+
+	<h5 class="mb-2">OUTSIDE SPACE</h5>
+	<p>The Waynesville and Maggie Valley areas are known for their stunning natural beauty, and staying a week or two in this home allows you to experience 
+	it for yourself without ever having to venture far.The sweeping shady balconies with classic rocking chairs are the perfect place for enjoying outdoor 
+	living. There's an electric grill for BBQ to have outside on the deck with the family. Enjoy conversations in the evenings around the fire pit in the big
+	 backyard.</p>
+	 
+	 <h5 class="mb-2">GUEST ACCESS</h5>
+	<p>When you stay in this beautiful cabin, you have the entire place to yourself. You can use all the rooms and amenities. The home has a washer and dryer,
+	 baby equipment, a barbecue grill, laptop-friendly workspaces, and fully equipped kitchen and bathroom essentials that you are free to use. You can park 
+	 right on site. AWD or 4WD is recommended during the winter months - you will get stuck otherwise. This is a mountain with steep roads and sharp 
+	 switchbacks. Utah Mountain Road is a paved mountain road and the only paved mountain road the entire way up so please take that route only. Please note 
+	 the owner does not have an AWD or 4WD vehicle and commutes up and down the mountain several times a week. AWD and 4WD drive is not required during the 
+	 summer months but is a plus if you have it to make the drive more comfortable. You will be given a unique key code to access the keypad on the front door
+	  and all the information about connecting to the internet before you arrive. From here, you're just minutes from local grocery stores, great restaurants,
+	   hiking trails, parks and playgrounds, and some of the most beautiful natural landmarks and views in the country. Come away to the peace, privacy, and 
+	   natural beauty of Waynesville and Maggie Valley!</p>
+	
+</div>
+
+<div class="col-md-4">
+
+	<h3>Entire cabin hosted by Tyler:</h3>
+	<p>Hello, I'm Tyler Stevens. I'm a retired music industry professional living 
+	in Asheville, NC. I bring my experience in entertainment to my vacation homes.
+	 I enjoy traveling, hiking, and the great outdoors. I can't wait for you to come and 
+	 experience my piece of heaven with a mountain view!<p>
+	
+	<hr>
+	
+	<div class="row pt-3 pb-3 row-cols-lg-1">
+	<h3 class="mb-4">What We Offer:</h3><br/>
+	<div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#house"/></svg>
+        </div>
+        <div>
+          <h5 class="mb-0">Accommodations</h5>
+          <p>6 Guests | 2 Bedrooms | 4 Beds | 2.5 Baths</p>
+          
+        </div>
+      </div>
+	
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#internet"/></svg>
+        </div>
+        <div>
+          <h5 class="mb-0">Great for remote work</h5>
+          <p>Fast wifi at 74 Mbps, plus a dedicated workspace in a private room.</p>
+          
+        </div>
+      </div>
+      </div>
+      
+      <div class="row pb-3 row-cols-lg-1">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#door"/></svg>
+        </div>
+        <div>
+          <h5 class="mb-0">Self check-in</h5>
+          <p>Check yourself in with the smartlock.</p>
+          
+        </div>
+      </div>
+      </div>
+
+	<div class="row pb-3 row-cols-lg-1">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#person"/></svg>
+        </div>
+        <div>
+          <h5 class="mb-0">Tyler is a Superhost via Airbnb</h5>
+          <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</p>
+          
+        </div>
+      </div>
+      </div>
+      
+      <h3>House Amenities:</h3>
+	<ul th:each="amenity: ${amenitiesList}">
+		<li th:text="${amenity.name}"></li>
+	</ul>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
